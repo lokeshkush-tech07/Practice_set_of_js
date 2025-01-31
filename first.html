@@ -1,12 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Document</title>
+  <title>myntra bag</title>
+  <link rel="stylesheet" href="first.css">
 </head>
 <body>
   <main>
-    <button>wishlist</button>
-    <button>add to bag</button>
+    <button class="bag" onclick="cart_quantity = cart_quantity + 1;
+      document.querySelector('#cart_items').innerText = `Your bag has ${cart_quantity} items.`;">add to bag</button>
+
+    <button class="wishlist" onclick="cart_quantity = cart_quantity - 1;
+      document.querySelector('#cart_items').innerText = `Your bag has ${cart_quantity} items.`;">move to wishlist</button>
+    <button class="bag" onclick="cart_quantity = cart_quantity + 2;
+      document.querySelector('#cart_items').innerText = `Your bag has ${cart_quantity} items.`;">add 1+1 sale item</button>
+    <br>
+    <br>
+    <br>
+
+    <h1 id="cart_items"></h1>
   </main>
  <script src="first.js"></script>
 </body>
